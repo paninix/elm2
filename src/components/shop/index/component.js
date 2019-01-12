@@ -1,9 +1,9 @@
-import topBar from '@/components/common/topBar/ui'
+import Bar from '@/components/common/bar/ui'
 import Base from '@/base/base.vue'
 
 export default Base.extend({
   components: {
-    topBar
+    Bar
   },
   data() {
     return {};

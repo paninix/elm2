@@ -5,8 +5,17 @@ import SellerCache from '@/axios/seller/cache'
 export default Base.extend({
     data() {
       return {
-        
+        seller: {
+          supports:[{}]
+        },
+        isShowIntro: false
       };
+    },
+    methods: {
+      toggleShowIntro: function(){
+        console.log(this.isShowIntro);
+        this.isShowIntro = !this.isShowIntro;
+      }
     },
     created: function() {
       this.sellerCache = new SellerCache({});

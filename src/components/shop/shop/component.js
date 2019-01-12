@@ -12,7 +12,7 @@ export default Base.extend({
         }
     },
     created: function() {
-        this.sellerCache = new SellerCache()
+        this.sellerCache = new SellerCache();
         this.getSeller();
     }
 })
