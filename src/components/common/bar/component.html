@@ -34,10 +34,7 @@
         <div>
             <h2>优惠信息</h2>
             <ul>
-                <li v-for="(support,index) in seller.supports" :key="index">
-                    <i class="icon iconfont icon-zhengpinbaozhang"></i>
-                    {{support.description}}
-                </li>
+                <li v-for="(support,index) in seller.supports" :key="index">{{support.description}}</li>
             </ul>
         </div>
         <div>

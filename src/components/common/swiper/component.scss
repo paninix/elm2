@@ -4,16 +4,17 @@ $rem-base: 37px;
 
 .swiper {
     width: 100%;
+    height: rem(44px);
+    line-height: rem(44px);
     font-size: rem(14px);
-    padding: rem(15px) rem(50px);
     border-bottom: rem(1px) solid #ccc;
     background-color: #fff;
     top: 0;
     z-index: 100;
-    span {
-      margin-right: rem(80px);
-    }
-    span:last-child {
-      margin-right: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .item {
+      flex: 1
     }
   }
