@@ -46,6 +46,9 @@ const actions={
 	changeLoginState({commit,state}) {
 		state.isLogin = !state.isLogin;
 	},
+	addRef({commit,state}, ref) {
+		state.refs[ref.name] = ref.value;
+	}
 }
 
 export default actions;

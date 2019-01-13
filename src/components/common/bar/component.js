@@ -13,7 +13,6 @@ export default Base.extend({
     },
     methods: {
       toggleShowIntro: function(){
-        console.log(this.isShowIntro);
         this.isShowIntro = !this.isShowIntro;
       }
     },
@@ -21,6 +20,12 @@ export default Base.extend({
       this.sellerCache = new SellerCache({});
       this.sellerCache.getSeller({
         success: res=>this.seller = res
+      });
+    },
+    mounted: function() {
+      this.$store.dispatch('addRef', {
+        name: 'bar',
+        value: this.$refs.bar
       });
     }
   })

@@ -9,13 +9,32 @@ export default Base.extend({
   },
   data() {
     return {
-      
+      goods: []
     };
   },
   methods: {
-    
+    getGood: function() {
+      this.goodCache.getGoods({
+        success: res=>this.goods = res
+      })
+    },
+    addFood: function(food) {
+      this.$refs[food.foodId][0].style.display = "inline";
+      this.$store.dispatch("addOrder", food);
+    },
+    subFood: function(food) {
+      // this.$refs[food.foodId][0].style.display = "none";
+      this.$store.dispatch("subOrder", food);
+    }
   },
   created: function() {
     this.goodCache = new GoodCache() 
+    this.getGood();
+  },
+  mounted: function() {
+    this.$store.dispatch('addRef', {
+      name: 'type',
+      value: this.$refs.orderType
+    });
   }
 })

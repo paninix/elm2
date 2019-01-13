@@ -1,3 +1,31 @@
-<div id="order">
-   
-  </div>
+<div class="order">
+    <div class="order-type" ref="orderType">
+      <ul>
+        <li v-for="(type,index) in goods" :key="index">{{type.name}}</li>
+      </ul>
+    </div>
+    <div class="order-good">
+      <ul>
+        <li v-for="(type,index) in goods" :key="index">
+          <h2>{{type.name}}</h2>
+          <ul>
+            <router-link tag="li" :to="{path:'/detail',query: {id:food.foodId}}" v-for="(food,index) in type.foods" :key="index">
+              <div class="img f-fl">
+                <img :src="food.image">
+              </div>
+              <div class="infor f-fl">
+                <h3>{{food.name}}</h3>
+                <p>月售{{food.sellCount}}份 好评率{{food.rating}}%</p>
+                <span>￥{{food.price}}</span>
+              </div>
+              <div class="opera">
+                <i class="icon iconfont icon-jian f-fl" @click.prevent="subFood(food)" :ref="food.foodId"></i>
+                <i class="icon iconfont icon-jia f-fr" @click.prevent="addFood(food)"></i>
+              </div>
+            </router-link>
+          </ul>
+        </li>
+      </ul>
+    </div>
+<!-- <cart></cart> -->
+</div>

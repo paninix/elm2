@@ -1,0 +1,121 @@
+$rem-base: 37px;
+
+@function rem($pxval) { @return ($pxval / $rem-base) * 1rem; }
+.bar {
+    font-size: rem(12px);
+    &-infor {
+      height: rem(60px);
+      position: relative;
+      background: rgba(7, 17, 27, 0.7);
+      padding: rem(30px) 0 rem(20px) rem(25px);
+      color: #fff;
+      .avatar {
+        margin-right: rem(15px);
+        img {
+          width: rem(64px);
+          height: rem(64px);
+          border-radius: rem(5px);
+        }
+      }
+      .infor {
+        h1 {
+          font-size: rem(16px);
+        }
+        span {
+          height: rem(32px);
+          line-height: rem(32px);
+          font-size: rem(12px);
+          display: block;
+        }
+        div {
+          font-size: rem(12px);
+        }
+      }
+      .more {
+        height: rem(25px);
+        width: rem(50px);
+        position: absolute;
+        top: rem(70px);
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        font-size: rem(12px);
+        line-height: rem(25px);
+        text-align: center;
+        border-radius: rem(10px);
+      }
+      .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    &-announce {
+      background-color: #333;
+      font-size: rem(12px);
+      color: #fff;
+      padding: rem(8px);
+      span {
+        width: rem(310px);
+        height: rem(14px);
+        line-height: rem(14px);
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      i {
+        font-size: rem(16px);
+      }
+    }
+    &-mask {
+      color: #fff;
+      background: rgba(0,0,0,.8);
+      position: fixed;
+      height: 100%;
+      z-index: 100;
+      top: 0;
+      padding-top: rem(65px);
+      text-align: center;
+      .el-rate {
+        margin: rem(20px) 0;
+      }
+      .el-icon-close {
+        font-size: rem(28px);
+      }
+      ul {
+          text-align: left;
+          padding: rem(28px) rem(48px);
+          font-size: rem(12px);
+          li {
+              margin-top: rem(16px);
+              i {
+                  margin-right: rem(2px);
+              }
+          }
+      }
+      p {
+          padding: rem(28px) rem(48px);
+          letter-spacing: rem(2px);
+          text-align: left;
+          font-size: rem(12px);
+          line-height: rem(24px);
+      }
+    }
+    &-admin {
+      position: absolute;
+      top: rem(10px);
+      right: rem(10px);
+      font-size: rem(12px);
+      font-weight: 700;
+      a {
+        color: #00a0dc;
+      }
+    }
+  }

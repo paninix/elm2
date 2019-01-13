@@ -1,5 +1,5 @@
-<style lang="less">
-    @import "./component.less";
+<style lang="scss">
+    @import "./component.scss";
 </style>
 <script>
     import Component from './component'

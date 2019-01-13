@@ -1,0 +1,82 @@
+$rem-base: 37px;
+
+@function rem($pxval) { @return ($pxval / $rem-base) * 1rem; }
+
+.order {
+  position: relative;
+  font-size: rem(12px);
+  &-type {
+    position: absolute;
+    width: rem(100px);
+    height: 100%;
+    color: #666;
+    background-color: #f3f5f7;
+    font-size: rem(12px);
+    li {
+      padding: rem(20px) rem(15px);
+    }
+    li:hover {
+      background-color: #fff;
+      color: #000;
+      font-weight: bold;
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+  &-good {
+    margin-left: rem(100px);
+    ul {
+      li {
+        h2 {
+          height: rem(28px);
+          line-height: rem(28px);
+          font-size: rem(12px);
+          padding-left: rem(8px);
+          border-left: rem(2px) solid #ccc;
+          background-color: #f3f5f7;
+        }
+        ul {
+          li {
+            position: relative;
+            padding: rem(18px) rem(18px);
+            height: rem(60px);
+            .img {
+              margin-right: rem(10px);
+              img {
+                width: rem(57px);
+                height: rem(57px);
+              }
+            }
+            .infor {
+              h3 {
+                font-size: rem(14px);
+              }
+              p {
+                font-size: rem(10px);
+                height: rem(28px);
+                line-height: rem(28px);
+                margin-left: rem(2px);
+                color: #93999f;
+              }
+              span {
+                font-size: rem(14px);
+                color: #f01414;
+              }
+            }
+            .opera {
+              position: absolute;
+              width: rem(50px);
+              top: rem(64px);
+              left: rem(200px);
+              font-size: rem(16px);
+              .icon-jian {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -12,6 +12,10 @@ const getters={
 	getLoginState(state) {
 		return state.isLogin;
 	},
+	//获取dom树
+	getRefs(state) {
+		return state.refs;
+	}
 }
 
 export default getters;

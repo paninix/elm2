@@ -1,16 +1,32 @@
-/*布局（grid）*/
+/*统一处理*/
+@media screen and (max-width:360px) { html {font-size: 200%; }}
+@media screen and (min-width:360px) and (max-width:374px) {html {font-size: 225%;}}
+@media screen and (min-width:375px) and (max-width:383px) {html {font-size: 234.375%;}}
+@media screen and (min-width:384px) and (max-width:399px) {html {font-size: 240%;}}
+@media screen and (min-width:400px) and (max-width:413px) {html {font-size: 250%;}}
+@media screen and (min-width:414px) and (max-width:431px) {html {font-size: 258.75%;}}
+@media screen and (min-width:432px) and (max-width:479px) {html, body {font-size: 270%;}}
+@media screen and (min-width:480px) and (max-width:529px) {html, body {font-size: 300%;}}
+@media screen and (min-width:530px) and (max-width:574px) {html, body {font-size: 331.25%;}}
+@media screen and (min-width:575px) and (max-width:614px) {html, body {font-size: 359.375%;}}
+@media screen and (min-width:615px) and (max-width:644px) {html, body {font-size: 384.375%;}}
+@media screen and (min-width:645px) and (max-width:674px) {html, body {font-size: 384.375%;}}
+@media screen and (min-width:675px) and (max-width:704px) {html, body {font-size: 412.875%;}}
+@media screen and (min-width:705px) and (max-width:749px) {html, body {font-size: 440.625%;}}
+@media screen and (min-width:750px) and (max-width:779px) {html, body {font-size: 468.75%;}}
+@media screen and (min-width:780px) and (max-width:809px) {html, body {font-size: 487.5%;}}
+@media screen and (min-width:810px) and (max-width:839px) {html, body {font-size: 506.25%;}}
+@media screen and (min-width:840px) and (max-width:869px) {html, body {font-size: 525%;}}
+@media screen and (min-width:870px) and (max-width:900px) {html, body {font-size: 543.75%;}}
+@media screen and (min-width:901px) {html, body {font-size: 600%;}}
+/*布局（grid）*/ 
+.g-row { display: flex; }
+.g-col { flex: 1; }
 /*模块（module）*/
 /*元件（unit）*/
 /*功能（function）*/
 .f-cb { clear: both; }
 .f-fl { float: left; }
 .f-fr { float: right; } 
-.f-fs12 { font-size: 12px; }
-.f-fs14 { font-size: 14px; }
-.f-fs16 { font-size: 16px; }
-.f-fs18 { font-size: 18px; }
-.f-fs20 { font-size: 20px; }
-.f-fs28 { font-size: 28px; }
-
 /*皮肤（skin）*/
 /*状态*/
