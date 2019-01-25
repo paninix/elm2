@@ -1,3 +1,70 @@
-#detail {
-    
+$rem-base: 37px;
+@function rem($pxval) { @return ($pxval / $rem-base) * 1rem; }
+
+.detail {
+    font-size: rem(14px);
+    &-img {
+        width: 100%;
+        height: rem(300px);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-infor {
+        padding: rem(18px);
+        border-bottom: rem(20px) solid #eee;
+        p {
+            height: rem(28px);
+            line-height: rem(28px);
+            font-size: rem(12px);
+            color: #999;
+        }
+        .price {
+            height: rem(30px);
+            line-height: rem(30px);
+            color: #f01414;
+            font-size: rem(16px);
+            font-weight: 700;
+        }
+        .add {
+            color: #fff;
+            background-color: #409eff;
+            border-color: #409eff;
+            font-size: rem(12px);
+            padding: rem(9px) rem(15px);
+            border-radius: rem(20px);
+        }
+    }
+    &-intro {
+        padding: rem(18px);
+        border-bottom: rem(20px) solid #eee;
+        h2 {
+            margin-bottom: rem(8px);
+        }
+        article {
+            text-indent: rem(24px);
+            font-size: rem(12px);
+            color: #000;
+            line-height: rem(24px);
+            font-weight: 200;
+        }
+    }
+    &-rating {
+        height: rem(200px);
+        margin-bottom: rem(50px);
+        h2 {
+            margin-top: rem(18px);
+            margin-left: rem(18px);
+        }
+    }
+    &-back {
+        position: fixed;
+        top: rem(20px);
+        left: rem(20px);
+        font-size: rem(20px);
+        .iconfont {
+            font-size: rem(24px);
+        }
+    }
 }

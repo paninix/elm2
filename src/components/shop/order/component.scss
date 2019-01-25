@@ -26,6 +26,7 @@ $rem-base: 37px;
   }
   &-good {
     margin-left: rem(100px);
+    margin-bottom: rem(100px);
     ul {
       li {
         h2 {
@@ -66,12 +67,15 @@ $rem-base: 37px;
             }
             .opera {
               position: absolute;
-              width: rem(50px);
+              width: rem(60px);
               top: rem(64px);
               left: rem(200px);
               font-size: rem(16px);
-              .icon-jian {
-                display: none;
+              .iconfont {
+                font-size: rem(16px);
+              }
+              .count {
+                padding-left: rem(10px);
               }
             }
           }

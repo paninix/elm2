@@ -3,7 +3,7 @@ import Base from '@/base/base.vue'
 export default Base.extend({
     data() {
         return {
-            
+            number: 1
         }
     },
     computed: {
