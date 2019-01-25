@@ -1,0 +1,19 @@
+<div class="shop">
+    <div class="shop-img">
+        <h2>商家实景</h2>
+        <ul>
+            <li v-for="(pic,index) in seller.pics" :key="index">
+                <img :src="pic.picSrc">
+            </li>
+        </ul>
+    </div>
+    <div class="block"></div>
+    <div class="shop-infor">
+        <h2>商家信息</h2>
+        <ul>
+            <li v-for="(info,index) in seller.infos" :key="index">
+                <span>{{info.info}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

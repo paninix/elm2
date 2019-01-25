@@ -40,8 +40,8 @@ export default [
           component: resolve => require(['@/components/shop/rating/ui'],resolve)
         },
         {
-          path: 'shop',
-          component: resolve => require(['@/components/shop/shop/ui'],resolve)
+          path: 'seller',
+          component: resolve => require(['@/components/shop/seller/ui'],resolve)
         }
       ]
     }

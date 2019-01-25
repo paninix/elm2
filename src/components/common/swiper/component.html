@@ -1,5 +1,5 @@
 <div class="swiper" ref="swiper">
-    <div class="item"><router-link to="order">点餐</router-link></div>
-    <div class="item"><router-link to="rating">评价</router-link></div>
-    <div class="item"><router-link to="shop">商家</router-link></div>
+    <div :class="{'item': true, 'active': number === 1}" @click="number=1"><router-link to="order">点餐</router-link></div>
+    <div :class="{'item': true, 'active': number === 2}" @click="number=2"><router-link to="rating">评价</router-link></div>
+    <div :class="{'item': true, 'active': number === 3}" @click="number=3"><router-link to="seller">商家</router-link></div>
 </div>

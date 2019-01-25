@@ -1,3 +1,24 @@
-<div id="detail">
-    
-</div>
+<div class="detail" transition="showDetail">
+        <div class="detail-img">
+            <img :src="food.image">
+        </div>
+        <div class="detail-infor">
+            <h1>{{food.name}}</h1>
+            <p>月售{{food.sellCount}} 好评率{{food.rating}}%</p>
+            <div class="f-oh">
+                <span class="price f-fl">￥{{food.price}}</span>
+                <span class="add f-fr"  @click="addFood(food)">加入购物车</span>
+            </div>
+        </div>
+        <div class="detail-intro">
+            <h2>商品介绍</h2>
+            <article>{{food.info}}</article>
+        </div>
+        <div class="detail-rating">
+            <h2>商品评价</h2>
+        </div>
+        <div class="detail-back" @click="goBack">
+            <i class="iconfont icon-back"></i>
+        </div>
+        <cart></cart>
+    </div>

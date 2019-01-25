@@ -27,6 +27,7 @@
 /*功能（function）*/
 .f-cb { clear: both; }
 .f-fl { float: left; }
-.f-fr { float: right; } 
+.f-fr { float: right; }
+.f-oh { overflow: hidden; } 
 /*皮肤（skin）*/
 /*状态*/

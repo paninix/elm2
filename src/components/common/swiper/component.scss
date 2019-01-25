@@ -10,11 +10,14 @@ $rem-base: 37px;
     border-bottom: rem(1px) solid #ccc;
     background-color: #fff;
     top: 0;
-    z-index: 100;
+    z-index: 4;
     display: flex;
     justify-content: center;
     text-align: center;
     .item {
       flex: 1
+    }
+    .active {
+      font-weight: 700;
     }
   }

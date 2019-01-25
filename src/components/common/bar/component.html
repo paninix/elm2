@@ -4,28 +4,21 @@
             <img :src="seller.avatar">
         </div>
         <div class="infor f-fl">
-            <h1>
-                <i class="icon iconfont icon-dianpu"></i>
-                {{seller.name}}
-            </h1>
+            <h1>{{seller.name}}</h1>
             <span>{{seller.description}}/{{seller.deliveryTime}}分钟送达</span>
-            <div>
-                <i class="icon iconfont icon-tianmaozengyunfeixian"></i>
-                {{seller.supports[0].description}}
-            </div>
+            <div>{{seller.supports[0].description}}</div>
         </div>
         <div class="more" @click="toggleShowIntro">
             {{seller.supports.length}}个
-            <i class="el-icon-arrow-right"></i>
+            <i class="iconfont icon-go"></i>
         </div>
         <div class="bg">
             <img :src="seller.avatar">
         </div>
     </div>
     <div class="bar-announce" @click="toggleShowIntro">
-        <i class="icon iconfont icon-gonggao"></i>
         <span>{{seller.bulletin}}</span>
-        <i class="el-icon-arrow-right"></is>
+        <i class="iconfont icon-go"></is>
     </div>
     <div class="bar-mask" v-show="isShowIntro">
         <h1>{{seller.name}}</h1>
@@ -41,11 +34,11 @@
             <h2>商家公告</h2>
             <p>{{seller.bulletin}}</p>
         </div>
-        <div @click="toggleShowIntro"><i class="el-icon-close"></i></div>
+        <div @click="toggleShowIntro"><i class="icon iconfont icon-close"></i></div>
     </div>
     <div class="bar-admin">
         <router-link to="/admin">
-          <i class="icon iconfont icon-wo"></i>
+          <i class="iconfont icon-me"></i>
         </router-link>
     </div>
 </div>
