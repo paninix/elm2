@@ -1,10 +1,10 @@
 <div class="order">
-  <div class="order-type" ref="orderType">
+  <section class="order-type" ref="orderType">
     <ul>
       <li v-for="(type,index) in goods" :key="index" @click="doScroll(index)">{{type.name}}</li>
     </ul>
-  </div>
-  <div class="order-good">
+  </section>
+  <section class="order-good">
     <ul>
       <li v-for="(type,index) in goods" :key="index" :ref="index">
         <h2>{{type.name}}</h2>
@@ -27,6 +27,6 @@
         </ul>
       </li>
     </ul>
-  </div>
+  </section>
   <cart></cart>
 </div>

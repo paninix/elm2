@@ -7,13 +7,15 @@ $rem-base: 37px;
     height: rem(44px);
     line-height: rem(44px);
     font-size: rem(14px);
-    border-bottom: rem(1px) solid #ccc;
+    border-bottom: rem(1px) solid #eee;
     background-color: #fff;
     top: 0;
     z-index: 4;
-    display: flex;
-    justify-content: center;
     text-align: center;
+    ul {
+      display: flex;
+      justify-content: center;
+    }
     .item {
       flex: 1
     }

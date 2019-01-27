@@ -1,5 +1,5 @@
 <div class="bar" ref="bar">
-    <div class="bar-infor">
+    <section class="bar-infor">
         <div class="avatar f-fl">
             <img :src="seller.avatar">
         </div>
@@ -15,12 +15,12 @@
         <div class="bg">
             <img :src="seller.avatar">
         </div>
-    </div>
-    <div class="bar-announce" @click="toggleShowIntro">
+    </section>
+    <section class="bar-announce" @click="toggleShowIntro">
         <span>{{seller.bulletin}}</span>
         <i class="iconfont icon-go"></is>
-    </div>
-    <div class="bar-mask" v-show="isShowIntro">
+    </section>
+    <section class="bar-mask" v-show="isShowIntro">
         <h1>{{seller.name}}</h1>
         <el-rate v-model="seller.score" disabled>
         </el-rate>
@@ -35,10 +35,10 @@
             <p>{{seller.bulletin}}</p>
         </div>
         <div @click="toggleShowIntro"><i class="icon iconfont icon-close"></i></div>
-    </div>
-    <div class="bar-admin">
+    </section>
+    <section class="bar-admin">
         <router-link to="/admin">
           <i class="iconfont icon-me"></i>
         </router-link>
-    </div>
+    </section>
 </div>

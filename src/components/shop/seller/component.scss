@@ -3,12 +3,13 @@ $rem-base: 37px;
 @function rem($pxval) { @return ($pxval / $rem-base) * 1rem; }
 
 .shop {
+    .title {
+        font-size: rem(14px);
+        margin-bottom: rem(10px);
+    }
     &-img {
         padding: rem(18px);
-        h2 {
-            font-size: rem(14px);
-            margin-bottom: rem(10px);
-        }
+        border-bottom: rem(20px) solid #f3f5f7;
         ul {
             display: flex;
         }
@@ -22,10 +23,6 @@ $rem-base: 37px;
     }
     &-infor {
         padding: rem(18px);
-        h2 {
-            font-size: rem(14px);
-            margin-bottom: rem(10px);
-        }
         li {
             padding: rem(16px);
             border-bottom: rem(1px) solid #eee;
