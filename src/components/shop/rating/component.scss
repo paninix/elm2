@@ -1,3 +1,48 @@
-#rating {
-   
+$rem-base: 37px;
+@function rem($pxval) { @return ($pxval / $rem-base) * 1rem; }
+
+.rating {
+   font-size: rem(14px);
+   &-score {
+      padding: rem(20px);
+      border-bottom: rem(10px) solid #eee;
+      .total {
+         width: 50%;
+         // margin-right: rem(10px);
+         .number {
+            font-size: rem(32px);
+            color: #ff6000;
+         }
+         .star {
+            font-size: rem(12px);
+            p {
+               margin-bottom: rem(2px);
+            }
+            i {
+               font-size: rem(12px);
+            }
+         }
+      }
+      .part {
+         width: 50%;
+         display: flex;
+         justify-content: space-around;
+         color: #666;
+         text-align: center;
+         li {
+            p {
+               font-size: rem(12px);
+               margin-bottom: rem(10px);
+            }
+            span {
+               font-size: rem(18px);
+            }
+         }
+      }
+   }
+   &-swiper {
+      ul {
+         display: flex;
+      }
+   }
 }

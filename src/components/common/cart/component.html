@@ -1,5 +1,5 @@
 <div class="cart">
-    <div class="cart-top" v-show="isShowCart">
+    <section class="cart-top" v-show="isShowCart">
         <div>
             <span class="select f-fl">已选商品</span>
             <span class="empty f-fr" @click="cleanCart">清空</span>
@@ -15,8 +15,8 @@
                 </span>
             </li>
         </ul>
-    </div>
-    <div class="cart-bottom">
+    </section>
+    <section class="cart-bottom">
         <div class="left f-fl">
             <i class="iconfont icon-cart" v-if="totalMoney <= 0"></i>
             <i class="iconfont icon-cart2" @click="toggleCart" v-else></i>
@@ -29,6 +29,6 @@
         <div class="right pay f-fr" v-else>
             <span><router-link to="/account">去结算</router-link></span>
         </div>
-    </div>
-    <div class="cart-mask" v-show="isShowCart" @click="toggleCart"></div>
+    </section>
+    <section class="cart-mask" v-show="isShowCart" @click="toggleCart"></section>
 </div>
