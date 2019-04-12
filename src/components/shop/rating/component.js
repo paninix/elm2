@@ -27,6 +27,11 @@ export default Base.extend({
         })
       }
     },
+    filters: {
+      localeDate: function(time) {
+        return new Date(Number(time)).toLocaleDateString().replace(/\//g,'.');
+      }
+    },
     created: function() {
       this.sellerCache = new SellerCache() 
       this.getRatings('0');

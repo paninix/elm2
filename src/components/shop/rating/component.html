@@ -31,5 +31,24 @@
             <li @click="getRatings('-1')" :class="{bad:true,badActive:isActive === '-1'}">吐槽</li>
         </ul>
     </section>
-    <section class="rating-content"></section>
+    <section class="rating-content">
+        <ul>
+            <li v-for="(rating,index) in ratings" :key="index">
+                <div class="avatar"><img :src="rating.avatar" alt=""></div>
+                <div class="infor">
+                    <div class="name">{{rating.nick}}</div>
+                    <div class="rate">
+                        <span class="score">{{rating.score}}分</span>
+                        <span>{{rating.deliveryTime}}分钟</span>
+                    </div>
+                    <div class="content">
+                        <p>{{rating.text}}</p>
+                    </div>
+                </div>
+                <div class="time">
+                    <span>{{rating.rateTime | localeDate}}</span>
+                </div>
+            </li>
+        </ul>
+    </section>
 </div>

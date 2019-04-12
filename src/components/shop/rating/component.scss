@@ -16,7 +16,7 @@ $rem-base: 37px;
          .star {
             font-size: rem(12px);
             p {
-               margin-bottom: rem(2px);
+               margin-bottom: rem(5px);
             }
             i {
                font-size: rem(12px);
@@ -43,6 +43,41 @@ $rem-base: 37px;
    &-swiper {
       ul {
          display: flex;
+         padding: rem(20px);
+         li {
+            padding: rem(10px) rem(20px);
+            margin-right: rem(10px);
+         }
+      }
+   }
+   &-content {
+      ul {
+         li {
+            display: flex;
+            padding: rem(20px) rem(20px) rem(20px) 0;
+            margin-left: rem(20px);
+            border-bottom: rem(1px) solid #ccc;
+            img {
+               width: rem(30px);
+               border-radius: 50%;
+            }
+            .avatar {
+               flex: 1;
+            }
+            .infor {
+               flex: 6;
+               .rate {
+                  margin-top: rem(5px);
+                  margin-bottom: rem(5px);
+               }
+               .score {
+                  color: #f90;
+               }
+            }
+            .time {
+               flex: 1;
+            }
+         }
       }
    }
 }

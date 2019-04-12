@@ -36,27 +36,26 @@ export default class AxiosCache {
 		send.method == 'get'
 			? options.data && (send.url += options.data)
 			: send.data = options.data
-		console.log(send.url)
 		axios(send)
-			.then(function (response) {
+			.then(function (res) {
 				send.url = baseURL;
-				if (self.resultJudge(response.data.status)) {
-					options.success(response.data.data)
+				if (self.resultJudge(res.data.status)) {
+					options.success(res.data.data)
 				} else {
 					options.fail
-						? options.fail(response.data.data)
-						: self.handleErrorCase(response.data.status)
+						? options.fail(res.data.data)
+						: self.handleErrorCase(res.data.status)
 				}
-			}).catch(function (error) {
-				self.handleErrorCase(error)
+			}).catch(function (err) {
+				self.handleErrorCase(err)
 			})
 	}
 
-	handleErrorCase(error) {
-		if (typeof error == 'Number') {
-			console.log(error)
+	handleErrorCase(err) {
+		if (typeof err == 'Number') {
+			console.log(err)
 		} else {
-			alert(error)
+			alert(err)
 		}
 	}
 }
